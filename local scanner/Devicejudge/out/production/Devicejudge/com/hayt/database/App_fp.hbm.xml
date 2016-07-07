@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.hayt.database">
+    <class name="App_fp">
+        <id name="id">
+            <generator class="native"/>
+        </id>
+        <property name="app_name" length="20"/>
+        <property name="UA"/>
+        <property name="fingerprint" length="100"/>
+    </class>
+</hibernate-mapping>

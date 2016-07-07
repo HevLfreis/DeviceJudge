@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Device Judge</title>
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link rel="stylesheet" type="text/css" href="/static/lib/bootstrap/css/bootstrap.css">
+    
+    <link rel="stylesheet" type="text/css" href="/static/stylesheets/theme.css">
+    <link rel="stylesheet" href="/static/lib/font-awesome/css/font-awesome.css">
+
+    <script src="/static/lib/jquery-1.7.2.min.js" type="text/javascript"></script>
+
+    <!-- Demo page code -->
+
+    <style type="text/css">
+        #line-chart {
+            height:300px;
+            width:800px;
+            margin: 0px auto;
+            margin-top: 1em;
+        }
+        .brand { font-family: georgia, serif; }
+        .brand .first {
+            color: #ccc;
+            font-style: italic;
+        }
+        .brand .second {
+            color: #fff;
+            font-weight: bold;
+        }
+    </style>
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="../assets/ico/favicon.ico">
+  </head>
+
+  <body class="">
+
+  <div class="navbar">
+      <div class="navbar-inner">
+          <ul class="nav pull-right">
+              <li id="fat-menu" class="dropdown">
+                  <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">
+                      <i class="icon-user"></i> {{ username }}
+                      <i class="icon-caret-down"></i>
+                  </a>
+                  <ul class="dropdown-menu">
+                      <li><a tabindex="-1" href="/devicejudge/logout">Log out</a></li>
+                  </ul>
+              </li>
+
+          </ul>
+          <a class="brand" href="/devicejudge/home"> <span class="second">Device Judge</span></a>
+      </div>
+  </div>
+  <div class="sidebar-nav">
+      <a href="#home-menu" class="nav-header" data-toggle="collapse"><i class="icon-home"></i>Home</a>
+      <ul id="home-menu" class="nav nav-list collapse in">
+          <li><a href="/devicejudge/home/">Home</a></li>
+          <li ><a href="/devicejudge/ipusers/?mode=0">IP Captured</a></li>
+      </ul>
+      <a href="#fingerprint-menu" class="nav-header" data-toggle="collapse"><i class="icon-eye-open"></i>Fingerprint</a>
+      <ul id="fingerprint-menu" class="nav nav-list collapse in">
+          <li ><a href="/devicejudge/applist">App List</a></li>
+          <li ><a href="/devicejudge/fps">Recorded Fingerprints</a></li>
+      </ul>
+      <a href="#stat-menu" class="nav-header" data-toggle="collapse"><i class="icon-bar-chart"></i>Stats</a>
+      <ul id="stat-menu" class="nav nav-list collapse in">
+          <li ><a href="/devicejudge/stats">Overall</a></li>
+          <li ><a href="/devicejudge/device">Device Scanned</a></li>
+          <li ><a href="/devicejudge/app">App Usage</a></li>
+      </ul>
+      <a href="#help-menu" class="nav-header collapsed" data-toggle="collapse"><i class="icon-question-sign"></i> Help</a>
+      <ul id="help-menu" class="nav nav-list collapse in">
+          <li ><a href="/devicejudge/about">About Us</a></li>
+      </ul>
+  </div>
+    
+
+    
+    <div class="content">
+        
+        <div class="header">
+            
+            <h1 class="page-title">Help</h1>
+        </div>
+        
+                <ul class="breadcrumb">
+            <li><a href="../index.html">Home</a> <span class="divider">/</span></li>
+            <li class="active">Help</li>
+        </ul>
+
+        <div class="container-fluid">
+            <div class="row-fluid">
+                    
+        <div class="faq-content">
+            <div class="row-fluid">
+                <div class="span9">
+                    <div class="search-well">
+                        <form class="form-inline">
+                            <input class="input-xlarge" placeholder="Search Help..." id="appendedInputButton" type="text">
+                            <button class="btn" type="button"><i class="icon-search"></i> Go</button>
+                        </form>
+                    </div>
+
+                    <div class="block">
+                        <p class="block-heading">Popular Topics</p>
+                        <div class="block-body">
+                            <ol>
+                                <li><a href="#">What if I have a question?</a></li>
+                                <li><a href="#">Where can I get support?</a></li>
+                                <li><a href="#">How long does it take to fix a problem?</a></li>
+                                <li><a href="#">Who can help me out?</a></li>
+                                <li><a href="#">Where are you located?</a></li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="block">
+                        <p class="block-heading">Premium Support Available</p>
+                        <div class="block-body">
+                        <div class="row-fluid">
+                            <p>Cress green bean potato bunya nuts water chestnut chicory rock melon jícama lotus root wattle seed eggplant coriander winter purslane spring onion.</p>
+                            <a href="#" class="btn btn-primary">Start Now</a>
+                            <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="block">
+                        <p class="block-heading">Popular Topics</p>
+                        <div class="block-body">
+                        <div class="row-fluid" style="text-align: center;">
+                            <div class="pull-left span4 unstyled">
+                                <p><a href="#">Your Account</a></p>
+                                <p><a href="#">Past Orders</a></p>
+                                <p><a href="#">Your Profile</a></p>
+                            </div>
+                            <div class="pull-left span4 unstyled">
+                                <p><a href="#">Your Account</a></p>
+                                <p><a href="#">Past Orders</a></p>
+                                <p><a href="#">Your Profile</a></p>
+                            </div>
+                            <div>
+                                <p><a href="#">Your Account</a></p>
+                                <p><a href="#">Past Orders</a></p>
+                                <p><a href="#">Your Profile</a></p>
+                            </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+
+                    <div class="block">
+                        <p class="block-heading">Some Helpful Information</p>
+                        <div class="block-body">
+                            <h2>Aubergine Asparagus Maize</h2>
+                            <p>Catsear corn gumbo leek chickpea summer purslane chicory. Taro azuki bean broccoli rabe soybean endive chicory. Pumpkin salsify horseradish avocado cabbage tomatillo ricebean caulie turnip greens eggplant.</p>
+
+                            <p>Sweet pepper pea sprouts mung bean cabbage radicchio silver beet coriander lentil groundnut jícama wattle seed black-eyed pea chicory broccoli rabe bamboo shoot. Kombu garlic watercress garbanzo squash plantain amaranth wattle seed tomatillo tigernut. Wakame watercress swiss chard bamboo shoot garlic wakame azuki bean lentil lettuce chicory horseradish eggplant gumbo. Swiss chard turnip jícama courgette fennel salsify brussels sprout zucchini sea lettuce desert raisin fava bean artichoke kale bell pepper watercress wakame black-eyed pea garlic. Lentil spring onion caulie welsh onion sweet pepper quandong potato wakame carrot taro artichoke prairie turnip eggplant.</p>
+
+                            <p>Scallion burdock silver beet water spinach turnip watercress aubergine. Komatsuna scallion bush tomato prairie turnip amaranth cress fennel parsnip plantain rutabaga lettuce chickweed radish. Yarrow bell pepper radish tomatillo avocado brussels sprout leek garlic salad pea sprouts sorrel courgette chickweed courgette carrot fennel cress lotus root.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="span3">
+                    <div class="toc">
+                        <h3>Table of Contents</h3>
+                        <ol>
+                            <li><a href="#">Orders</a></li>
+                            <li><a href="#">Billing</a></li>
+                            <li><a href="#">Shipping</a></li>
+                            <li><a href="#">Returns</a></li>
+                            <li><a href="#">Your Account</a></li>
+                        </ol>
+                    </div>
+                    <div class="toc">
+                        <h3>Contact Us</h3>
+                        <h4>By Phone</h4>
+                        <p>+1-123-333-4321</p>
+                        <h4>By Email</h4>
+                        <p><a href="#">hello@yourcompany.com</a></p>
+                        <h4>Address</h4>
+                        <address>
+        2817 S 49th<br>
+        Apt 314<br>
+        San Jose, CA 95101
+        </address>
+                        <div>
+                            <button class="btn"><i class="icon-facebook"></i></button>
+                            <button class="btn"><i class="icon-twitter"></i></button>
+                            <button class="btn"><i class="icon-linkedin"></i></button>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        </div>
+
+
+
+                <footer>
+                    <hr>
+                    <p>&copy; 2013 Haytham free All Rights Reserved.</p>
+                </footer>
+                    
+            </div>
+        </div>
+    </div>
+    
+
+
+    <script src="/static/lib/bootstrap/js/bootstrap.js"></script>
+    <script type="text/javascript">
+        $("[rel=tooltip]").tooltip();
+        $(function() {
+            $('.demo-cancel-click').click(function(){return false;});
+        });
+    </script>
+    
+  </body>
+</html>
+
+
